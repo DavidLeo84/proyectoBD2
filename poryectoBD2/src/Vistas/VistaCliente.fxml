@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutY="7.0" prefHeight="542.0" prefWidth="796.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+                <Tab text="inicio">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+                <Tab text="CATEGORIA">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btnCategoriaInsertar" layoutX="69.0" layoutY="237.0" mnemonicParsing="false" onAction="#crearCategoria" text="Crear" />
+                              <Button fx:id="btnCategoriaActualizar" layoutX="279.0" layoutY="237.0" mnemonicParsing="false" onAction="#actualizarCategoria" text="Actualizar" />
+                              <Button fx:id="btnCategoriaEliminar" layoutX="384.0" layoutY="237.0" mnemonicParsing="false" onAction="#eliminarCategoria" text="Eliminar" />
+                              <Button fx:id="btnCategoriaBuscar" layoutX="180.0" layoutY="237.0" mnemonicParsing="false" onAction="#buscarCategoria" text="Buscar" />
+                              <Label layoutX="377.0" layoutY="34.0" text="Categoria " />
+                              <Label layoutX="77.0" layoutY="91.0" text="id" />
+                              <Label layoutX="77.0" layoutY="123.0" text="Nombre" />
+                              <Label layoutX="622.0" layoutY="52.0" text="descripcion" />
+                              <Label layoutX="79.0" layoutY="158.0" text="Categoria Padre" />
+                              <ComboBox fx:id="cbox_categoriaPadre" layoutX="234.0" layoutY="154.0" prefWidth="150.0" />
+                              <TextField fx:id="txt_categoriaid" layoutX="233.0" layoutY="87.0" />
+                              <TextField fx:id="txt_categoriaNombre" layoutX="232.0" layoutY="119.0" />
+                              <TextArea fx:id="txt_CategoriaDescripcion" layoutX="503.0" layoutY="78.0" prefHeight="133.0" prefWidth="318.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="ARTICULO">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btn_articuloCrear" layoutX="175.0" layoutY="290.0" mnemonicParsing="false" onAction="#articuloCrear" text="Crerar" />
+                              <Button fx:id="btn_articuloBuscar" layoutX="300.0" layoutY="290.0" mnemonicParsing="false" onAction="#articuloBuscar" text="Buscar" />
+                              <Button fx:id="btn_articuloActualizar" layoutX="445.0" layoutY="290.0" mnemonicParsing="false" onAction="#ArticuloActualizar" text="Actualizar" />
+                              <Button fx:id="txt_articuloEliminar" layoutX="581.0" layoutY="290.0" mnemonicParsing="false" onAction="#articuloEliminar" text="Eliminar" />
+                              <Label layoutX="376.0" layoutY="35.0" text="ARTICULO" />
+                              <Label layoutX="129.0" layoutY="82.0" text="idArticulo" />
+                              <Label layoutX="129.0" layoutY="116.0" text="nombre" />
+                              <Label layoutX="129.0" layoutY="149.0" text="precio unitario" />
+                              <Label layoutX="129.0" layoutY="190.0" text="cantidad stock" />
+                              <Label layoutX="460.0" layoutY="82.0" text="Descipcion" />
+                              <Label layoutX="460.0" layoutY="125.0" text="Marca" />
+                              <Label layoutX="460.0" layoutY="158.0" text="Modelo" />
+                              <Label layoutX="460.0" layoutY="199.0" text="presentacion" />
+                              <Label layoutX="133.0" layoutY="232.0" text="imagen" />
+                              <Label layoutX="455.0" layoutY="241.0" text="calidad" />
+                              <TextField fx:id="txt_articuloid" layoutX="234.0" layoutY="78.0" />
+                              <TextField fx:id="txt_articulonombre" layoutX="234.0" layoutY="112.0" />
+                              <TextField fx:id="txt_articuloPreciounitario" layoutX="235.0" layoutY="145.0" />
+                              <TextField fx:id="txt_articuloCantidadStock" layoutX="235.0" layoutY="186.0" />
+                              <TextField fx:id="txt_articuloImagen" layoutX="235.0" layoutY="228.0" />
+                              <TextField fx:id="txt_articuloDescripcion" layoutX="543.0" layoutY="83.0" />
+                              <TextField fx:id="txt_ArticuloMarca" layoutX="543.0" layoutY="117.0" />
+                              <TextField fx:id="txt_ArticuloModelo" layoutX="544.0" layoutY="150.0" />
+                              <TextField fx:id="txt_articuloPresentacion" layoutX="544.0" layoutY="191.0" />
+                              <TextField fx:id="txt_articuloCalidad" layoutX="544.0" layoutY="233.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="HOSPEDAJE">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btn_CrearHospedaje" layoutX="234.0" layoutY="258.0" mnemonicParsing="false" onAction="#hospedajeCrear" text="Crear" />
+                              <Button fx:id="btn_BuscarHospedaje" layoutX="362.0" layoutY="258.0" mnemonicParsing="false" onAction="#hospedajeBuscar" text="Buscar" />
+                              <Button fx:id="btn_ActualizarHospedaje" layoutX="513.0" layoutY="258.0" mnemonicParsing="false" onAction="#hospedajeActualizar" text="Actualizar" />
+                              <Button fx:id="btnHospedajeEliminar" layoutX="628.0" layoutY="258.0" mnemonicParsing="false" onAction="#hospedajeEliminar" text="Eliminar" />
+                              <Label layoutX="381.0" layoutY="45.0" text="HOSPEDAJE" />
+                              <Label layoutX="201.0" layoutY="100.0" text="idHospedaje" />
+                              <Label layoutX="201.0" layoutY="133.0" text="Nombre" />
+                              <Label layoutX="201.0" layoutY="179.0" text="descripcion" />
+                              <Label layoutX="468.0" layoutY="179.0" text="tipo" />
+                              <Label layoutX="468.0" layoutY="100.0" text="ubicacion" />
+                              <Label layoutX="468.0" layoutY="133.0" text="estado Contrato" />
+                              <TextField fx:id="txt_hospedajeid" layoutX="295.0" layoutY="96.0" />
+                              <TextField fx:id="btn_hospedajenombre" layoutX="295.0" layoutY="129.0" />
+                              <TextField fx:id="btn_hospedajeDescripcion" layoutX="295.0" layoutY="175.0" />
+                              <TextField fx:id="btn_hospedajeUbicacion" layoutX="596.0" layoutY="96.0" />
+                              <TextField fx:id="btn_hospedajeestadoContrato" layoutX="597.0" layoutY="138.0" />
+                              <TextField fx:id="btn_hospedajeTipo" layoutX="598.0" layoutY="175.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="HABITACION">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="btn_habitacionBuscar" layoutX="353.0" layoutY="273.0" mnemonicParsing="false" onAction="#buscarHabitacion" text="Buscar" />
+                              <Button fx:id="btn_habitacionActualizar" layoutX="505.0" layoutY="273.0" mnemonicParsing="false" onAction="#actualizarHabitacion" text="Actualizar" />
+                              <Button fx:id="btn_habitacionEliminar" layoutX="655.0" layoutY="273.0" mnemonicParsing="false" onAction="#eliminarHabitacion" text="Eliminar" />
+                              <Button fx:id="btn_habitacionCrerar" layoutX="190.0" layoutY="273.0" mnemonicParsing="false" onAction="#CrearHabitacion" text="Creacion" />
+                              <Label layoutX="404.0" layoutY="36.0" text="HABITACION" />
+                              <Label layoutX="221.0" layoutY="86.0" text="idHabitacion" />
+                              <Label layoutX="221.0" layoutY="123.0" text="idHospedaje" />
+                              <Label layoutX="221.0" layoutY="154.0" text="nombre" />
+                              <Label layoutX="525.0" layoutY="86.0" text="categoria" />
+                              <Label layoutX="525.0" layoutY="132.0" text="cantidadPersonas" />
+                              <Label layoutX="519.0" layoutY="177.0" text="precioNoche" />
+                              <Label layoutX="221.0" layoutY="190.0" text="descripcion" />
+                              <TextField fx:id="txt_habitacionid" layoutX="317.0" layoutY="82.0" />
+                              <TextField fx:id="txt_HabitacionidHospedaje" layoutX="318.0" layoutY="120.0" />
+                              <TextField fx:id="txt_habitacionNombre" layoutX="317.0" layoutY="150.0" />
+                              <TextField fx:id="txt_habitacionDescripcion" layoutX="318.0" layoutY="186.0" />
+                              <TextField fx:id="txt_HabitacionCategoria" layoutX="639.0" layoutY="82.0" />
+                              <TextField fx:id="txt_habitacionCantPersonas" layoutX="639.0" layoutY="128.0" />
+                              <TextField fx:id="txt_habitacionPrecioNoche" layoutX="639.0" layoutY="174.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="DESTINO">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="390.0" layoutY="48.0" text="DESTINO" />
+                              <Button fx:id="btn_DestinoCrear" layoutX="201.0" layoutY="266.0" mnemonicParsing="false" onAction="#DestinoCrear" text="Crear" />
+                              <Button fx:id="btn_destinoBuscar" layoutX="338.0" layoutY="266.0" mnemonicParsing="false" onAction="#btn_destinoBuscar" text="Buscar" />
+                              <Button fx:id="btn_destinoActualizar" layoutX="485.0" layoutY="266.0" mnemonicParsing="false" onAction="#btn_destinoActualizar" text="Actualizar" />
+                              <Button fx:id="btn_destinoEliminar" layoutX="605.0" layoutY="266.0" mnemonicParsing="false" onAction="#destinoEliminar" text="Eliminar" />
+                              <Label layoutX="239.0" layoutY="114.0" text="idDestino" />
+                              <Label layoutX="239.0" layoutY="151.0" text="nombreDestino" />
+                              <Label layoutX="239.0" layoutY="187.0" text="descripcion" />
+                              <TextField fx:id="txt_destinoid" layoutX="355.0" layoutY="110.0" />
+                              <TextField fx:id="txt_destinoNombre" layoutX="356.0" layoutY="156.0" />
+                              <TextField fx:id="txt_destinoDescripcion" layoutX="356.0" layoutY="192.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="AUTOMOVIL">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="POLITICAS PAQUETE">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="408.0" prefWidth="754.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="POLITICAS HOSPEDAJE">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="INSTALACIONES">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="PAQUETE TURISTICO">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="USUARIO">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+              </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
